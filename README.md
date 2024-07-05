@@ -12,9 +12,10 @@ _This document contains the main commands and settings to configure/install/use 
 
 ### `vlc`
 
-O `vlc`, ou VideoLAN Client, é um popular reprodutor de mídia de código aberto que é amplamente utilizado para reproduzir uma variedade de formatos de áudio e vídeo em várias plataformas, incluindo Windows, macOS, Linux, Android e iOS. O `vlc` é conhecido por sua capacidade de lidar com uma ampla gama de tipos de arquivo, tornando-o uma escolha versátil para assistir a vídeos e ouvir música. Além disso, ele oferece recursos avançados, como suporte a legendas, streaming de mídia, ajustes de áudio e vídeo em tempo real e a capacidade de reproduzir mídia de discos ópticos, dispositivos de armazenamento externo e streaming online. O VLC também é apreciado por sua interface de usuário simples e intuitiva, além de ser de código aberto, o que significa que sua comunidade de desenvolvedores pode contribuir para aprimorar e expandir suas funcionalidades. É uma escolha popular para aqueles que buscam uma solução de reprodução de mídia confiável e versátil.
+O `vlc`, ou `VideoLAN Client`, é um popular reprodutor de mídia de código aberto que é amplamente utilizado para reproduzir uma variedade de formatos de áudio e vídeo em várias plataformas, incluindo `Windows`, `macOS`, `Linux`, `Android` e `iOS`. O `vlc` é conhecido por sua capacidade de lidar com uma ampla gama de tipos de arquivo, tornando-o uma escolha versátil para assistir a vídeos e ouvir música. Além disso, ele oferece recursos avançados, como suporte a legendas, streaming de mídia, ajustes de áudio e vídeo em tempo real e a capacidade de reproduzir mídia de discos ópticos, dispositivos de armazenamento externo e streaming online. O VLC também é apreciado por sua interface de usuário simples e intuitiva, além de ser de código aberto, o que significa que sua comunidade de desenvolvedores pode contribuir para aprimorar e expandir suas funcionalidades. É uma escolha popular para aqueles que buscam uma solução de reprodução de mídia confiável e versátil.
 
-## 1. Configurar/Instalar/usar o `vlc` no `Kali Ubuntu` [1]
+
+## 1. Configurar/Instalar/usar o `vlc` no `Linux Ubuntu` [1]
 
 Para instalar o `vlc` no `Linux Ubuntu`, você pode usar o gerenciador de pacotes `snap`. Siga os passos abaixo:
 
@@ -37,34 +38,34 @@ Para instalar o `vlc` no `Linux Ubuntu`, você pode usar o gerenciador de pacote
     2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
 
     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
-    
+   
 
-3. **Instalar o VLC:** Após a atualização, instale o VLC usando o seguinte comando: `sudo snap install vlc`
+3. **Instalar o `VLC`:** Após a atualização, instale o `VLC` usando o seguinte comando: `sudo snap install vlc -y`
 
-    Esse comando instalará a versão mais recente do VLC disponível nos repositórios do `Linux Ubuntu`.
+    Esse comando instalará a versão mais recente do `VLC` disponível nos repositórios do `Linux Ubuntu`.
 
-4. **Executar o VLC:** Uma vez instalado, você pode iniciar o VLC a partir do terminal digitando `vlc` ou encontrá-lo no menu de aplicações.
+4. **Executar o `VLC`:** Uma vez instalado, você pode iniciar o `VLC` a partir do terminal digitando `vlc` ou encontrá-lo no menu de aplicações.
 
 **Notas Adicionais:**
 
-- **Permissões:** Como o `Linux Ubuntu` é frequentemente usado com privilégios de superusuário, tenha cuidado ao instalar software e ao conceder permissões.
+- **Permissões:** Como o `Linux Ubuntu` é frequentemente usado com privilégios de superusuário, tenha cuidado ao instalar _software_ e ao conceder permissões.
 
-- **Repositórios de Software:** Se você enfrentar problemas ao instalar o VLC, certifique-se de que os repositórios de software do `Linux Ubuntu` estejam configurados corretamente.
+- **Repositórios de Software:** Se você enfrentar problemas ao instalar o `VLC`, certifique-se de que os repositórios de software do `Linux Ubuntu` estejam configurados corretamente.
 
 - **Dependências:** O gerenciador de pacotes `apt` geralmente resolve as dependências automaticamente, mas esteja atento a mensagens de erro relacionadas a dependências faltantes.
 
 Se houver algum erro durante a instalação, a mensagem de erro específica pode ajudar a identificar a solução.
 
-### 1.1 Código completo para configurar/instalar
+### 1.1 Código completo para configurar/instalar/usar
 
-Para configuração/instalar o `vlc` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
+Para configuração/instalar/usar o `vlc` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
 2. Digite o seguinte comando e pressione `Enter`:
 
     ```
-    sudo apt clean                                                            
+    sudo apt clean
     sudo apt autoclean
     sudo apt autoremove -y
     sudo apt update
@@ -72,13 +73,13 @@ Para configuração/instalar o `vlc` no `Linux Ubuntu` sem precisar digitar linh
     sudo apt clean
     sudo apt list --upgradable
     sudo apt full-upgrade -y
-    sudo snap install vlc -y
+    sudo snap install vlc
     vlc
     ```
 
 ## 2. Criar um atalho manualmente
 
-1. **Criar um Atalho Manualmente:** Se não houver uma entrada para o VLC, você pode criar uma manualmente. Use um editor de texto para criar um arquivo chamado `vlc.desktop` em `~/.local/share/applications/` com o seguinte conteúdo:
+1. **Criar um Atalho Manualmente:** Se não houver uma entrada para o `VLC`, você pode criar uma manualmente. Use um editor de texto para criar um arquivo chamado `vlc.desktop` em `~/.local/share/applications/` com o seguinte conteúdo:
 
     ```
     [Desktop Entry]
@@ -91,12 +92,13 @@ Para configuração/instalar o `vlc` no `Linux Ubuntu` sem precisar digitar linh
     Categories=AudioVideo;Player;Recorder;
     ```
 
-2. **Atualizar o Cache do Menu de Aplicações:** Às vezes, é necessário atualizar o cache do menu de aplicações para que as novas entradas apareçam. Isso pode ser feito com: `sudo update-desktop-database`
+2. **Atualizar o Cache do Menu de Aplicações:** Às vezes, é necessário atualizar o `cache` do menu de aplicações para que as novas entradas apareçam. Isso pode ser feito com: `sudo update-desktop-database`
 
 Se nenhuma dessas soluções funcionar, pode ser necessário investigar questões mais específicas do seu ambiente de desktop ou configurações do `Linux Ubuntu`.
 
 ## Referências
 
-[1] OPENAI. ***Instalar vlc noLinux Ubuntu:*** https://chat.openai.com/c/09d564cf-b2d8-49a1-a461-b14a4680c49a (texto adaptado). ChatGPT. Acessado em: 11/12/2023 12:11.
+[1] OPENAI. ***Instalar vlc no linux ubuntu.*** Disponível em: <https://chat.openai.com/c/09d564cf-b2d8-49a1-a461-b14a4680c49a> (texto adaptado). ChatGPT. Acessado em: 11/12/2023 12:11.
 
-[2] OPENAI. ***Vs code: editor popular:*** https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42 (texto adaptado). ChatGPT. Acessado em: 11/12/2023 12:11.
+[2] OPENAI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). ChatGPT. Acessado em: 11/12/2023 12:11.
+
